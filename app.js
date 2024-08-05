@@ -20,7 +20,7 @@ app.get("/welcome", (req, res) => {
     bcrypt.hash(myPlaintextPassword, salt, function (err, hash) {
       res.json({ message: "Welcome to our application once again Tailwind!!", hash: hash });
     });   
-  });
+  });   
 });
 
 // Start the server
