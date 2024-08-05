@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: tailwind.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_8e31b06cc7e44f4aa587f97e5a55a7bd }}/node-tail:${{ github.sha }}
+        tags: 01
         file: ./Dockerfile
 
   deploy:
