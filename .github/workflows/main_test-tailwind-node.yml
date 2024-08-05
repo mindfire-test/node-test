@@ -48,4 +48,4 @@ jobs:
         app-name: 'test-tailwind-node'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_6757665b58dd4b609eaf53040cd7d962 }}
-        images: 'tailwind.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_8e31b06cc7e44f4aa587f97e5a55a7bd }}/node-tail:${{ github.sha }}'
+        images: 'tailwind.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_8e31b06cc7e44f4aa587f97e5a55a7bd }}/test-node-tail:${{ github.sha }}'
