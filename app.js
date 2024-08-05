@@ -19,7 +19,7 @@ app.get("/welcome", (req, res) => {
   bcrypt.genSalt(saltRounds, function (err, salt) {
     bcrypt.hash(myPlaintextPassword, salt, function (err, hash) {
       res.json({ message: "Welcome to our application once again!!", hash: hash });
-    });
+    });   
   });
 });
 
