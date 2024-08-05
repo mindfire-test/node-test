@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Endpoint to return "Hello World"
 app.get("/hello", (req, res) => {
-  res.send("Hello World");
+  res.send("Hello World, Tailwind");
 });
 
 // Endpoint to return "Welcome message"
@@ -18,7 +18,7 @@ app.get("/welcome", (req, res) => {
   const myPlaintextPassword = "s0//P4$$w0rD";
   bcrypt.genSalt(saltRounds, function (err, salt) {
     bcrypt.hash(myPlaintextPassword, salt, function (err, hash) {
-      res.json({ message: "Welcome to our application once again!!", hash: hash });
+      res.json({ message: "Welcome to our application once again Tailwind!!", hash: hash });
     });   
   });
 });
