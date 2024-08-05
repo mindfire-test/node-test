@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://tailwind.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_6f41942d675a45ab9bb43d316f9f6566 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_ce93d462ab204c18b29f21f8bb33876a }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_7a31774be45349bbb218a1301d242d76 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_2ac26a1713d54f07b70911722fef01dd }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: tailwind.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_6f41942d675a45ab9bb43d316f9f6566 }}/tailwind:${{ github.sha }}
+        tags: tailwind.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_7a31774be45349bbb218a1301d242d76 }}/tailwind/tailwind:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'tailwind-container-app-poc'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_31150fb6a4294433b6737c2aaab64773 }}
-        images: 'tailwind.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_6f41942d675a45ab9bb43d316f9f6566 }}/tailwind:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6923eb19ccb044e8946a510ce57f365e }}
+        images: 'tailwind.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_7a31774be45349bbb218a1301d242d76 }}/tailwind/tailwind:${{ github.sha }}'
