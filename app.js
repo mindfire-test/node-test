@@ -14,7 +14,7 @@ app.get("/hello", (req, res) => {
 // Endpoint to return "Welcome message"
 app.get("/welcome", (req, res) => {
   console.log(`I am welcome log`);
-  const saltRounds = 10;
+  const saltRounds = 10;    
   const myPlaintextPassword = "s0//P4$$w0rD";
   bcrypt.genSalt(saltRounds, function (err, salt) {
     bcrypt.hash(myPlaintextPassword, salt, function (err, hash) {
