@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Endpoint to return "Hello World"
 app.get("/hello", (req, res) => {
-  res.send("Hello World, Tailwind one");
+  res.send("Hello World, Tailwind");
 });
 
 // Endpoint to return "Welcome message"
